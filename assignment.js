@@ -1,4 +1,4 @@
-//******************feetToMile********************
+//1....******************feetToMile********************
 
 function feetToMile(lengthInFeet) {
     if(lengthInFeet<0) {
@@ -10,14 +10,12 @@ function feetToMile(lengthInFeet) {
         return ("The Given Length in Miles is " + lengthInMile);
     }
 }
-var miles = feetToMile(130052);
-console.log(miles);
 
 
 
 
 
-// ****************woodCalculator*****************
+//2.....****************woodCalculator*****************
 
 function woodCalculator(numberOfChair,numberOfTable,numberOfBed) {
     if(numberOfChair<0 || numberOfTable<0 || numberOfBed<0) {
@@ -31,14 +29,12 @@ function woodCalculator(numberOfChair,numberOfTable,numberOfBed) {
         return ("The Number of Woods, You Need is " + totalWood);
     }
 }
-var numberOfWoods = woodCalculator(5,2,3);
-console.log (numberOfWoods);
 
 
 
 
 
-// ****************brickCalculator*****************
+//3.....****************brickCalculator*****************
 
 function brickCalculator(floorNumber) {
     if(floorNumber<=0) {
@@ -63,16 +59,12 @@ function brickCalculator(floorNumber) {
         return ("The Number of Bricks, You Need is " + totalBricks);
     }
 }
-var numberOfBricks = brickCalculator(21);
-console.log(numberOfBricks);
 
 
 
 
 
-
-
-// ******************tinyFriend********************
+//4.....******************tinyFriend********************
 
 function tinyFriend(nameOfFriends) {
     var shortestName=nameOfFriends[0];
@@ -82,12 +74,14 @@ function tinyFriend(nameOfFriends) {
         }
     }
 
-    var shortestNameList =[shortestName];
+    var shortestNameList = [shortestName];
 
+    //Loop to Find Multiple Friends Whom Have Shortest Name
     for (var i=0; i<nameOfFriends.length; i++) {
         if (shortestNameList[0].length == nameOfFriends[i].length) {
             shortestNameList.push(nameOfFriends[i]);
         }
+        //Condition to Remove The Duplicate Item
         if (shortestNameList[0] == nameOfFriends[i]) {
              shortestNameList.pop(nameOfFriends[i]);
         }
@@ -100,6 +94,3 @@ function tinyFriend(nameOfFriends) {
         return (`The Shortest Name/Names Among Your Friends is/are ${shortestNameList}`);
     }  
 }
-var friendList = ["Ork","Shad","Moon","Tushar","oro","vim","Sam","Alok","Nayon"];
-var tinyFriendResult = tinyFriend(friendList);
-console.log(tinyFriendResult);
